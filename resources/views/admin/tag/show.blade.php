@@ -62,7 +62,7 @@
                       {{method_field('DELETE')}}
                     </form>
                     <td>
-                 <a href="" onclick="
+                 <a  href="" onclick="
                  if(confirm('Are you sure want to delete it?'))
                  {
                     event.preventDefault();

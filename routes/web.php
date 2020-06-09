@@ -24,6 +24,11 @@ Route::group(['namespace'=>'admin'],function(){
 Route::get('admin/home', 'HomeController@index');
 //post routes
 Route::resource('admin/post','PostController');
+//album routes
+
+Route::get('admin/album','AlbumController@index')->name('album.index');
+Route::get('admin/album/create','AlbumController@create')->name('album.create');
+Route::post('admin/album/create','AlbumController@store')->name('album.store');
 //tag routes
 Route::resource('admin/tag','TagController');
 //category routes

@@ -1,5 +1,5 @@
 @extends('user/app')
-@section('bg-img',asset('user/img/home-bg.jpg'))
+@section('bg-img',asset('user/img/travel.jpg'))
 @section('title',"Welcome")
 @section('subheading',)
 @section('main-content')
