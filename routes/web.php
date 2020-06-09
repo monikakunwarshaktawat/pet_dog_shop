@@ -28,7 +28,9 @@ Route::resource('admin/post','PostController');
 
 Route::get('admin/album','AlbumController@index')->name('album.index');
 Route::get('admin/album/create','AlbumController@create')->name('album.create');
-Route::post('admin/album/create','AlbumController@store')->name('album.store');
+Route::post('admin/album/store','AlbumController@store')->name('album.store');
+Route::get('admin/photo/create/{albumId}','PhotoController@create')->name('photo.create');
+Route::post('admin/photo/store','PhotoController@store')->name('photo.store');
 //tag routes
 Route::resource('admin/tag','TagController');
 //category routes
