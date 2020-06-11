@@ -13,6 +13,9 @@
 //user routes
 Route::group(['namespace'=>'user'],function(){
 Route::get('/', 'HomeController@index');
+Route::get('/gallery','AlbumController@show')->name('gallery');
+Route::get('/gallery/album/{albumId}','AlbumController@photos')->name('photos');
+Route::get('/gallery/photos/{photoId}','PhotoController@photos')->name('getphoto');
 Route::get('post/{post}','PostController@post')->name('post');
 Route::get('post/tag/{tag}','HomeController@tag')->name('tag');
 Route::get('post/category/{category}','HomeController@category')->name('category');
@@ -29,8 +32,11 @@ Route::resource('admin/post','PostController');
 Route::get('admin/album','AlbumController@index')->name('album.index');
 Route::get('admin/album/create','AlbumController@create')->name('album.create');
 Route::post('admin/album/store','AlbumController@store')->name('album.store');
+Route::get('admin/photo/show/{albumId}','AlbumController@show')->name('album.show');
+//photo routes
 Route::get('admin/photo/create/{albumId}','PhotoController@create')->name('photo.create');
 Route::post('admin/photo/store','PhotoController@store')->name('photo.store');
+
 //tag routes
 Route::resource('admin/tag','TagController');
 //category routes

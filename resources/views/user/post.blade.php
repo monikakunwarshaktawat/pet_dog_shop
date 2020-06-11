@@ -1,7 +1,19 @@
 @extends('user/app')
-@section('bg-img',Storage::disk('local')->url($post->image))
-@section('title',$post->title)
-@section('subheading',$post->subtitle)
+@section('header')
+ <header class="masthead" style="background-image: url('{{ Storage::url($post->image) }}');">
+    <div class="overlay" style="opacity: 0"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>@yield('title')</h1>
+            <span class="subheading">@yield('subheading')</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  @endsection
 @section('main-content')
  <article>
     <div class="container">

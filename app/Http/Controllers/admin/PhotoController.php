@@ -32,7 +32,7 @@ public function store(Request $request)
     $photo->size=$request->file('cover_image')->getSize();
     $photo->album_id=$request->input('albumId');
     $photo->save();
-    return redirect(route('album.index'));
+    return redirect(route('album.show'));
 
 }
 

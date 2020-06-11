@@ -45,5 +45,10 @@ public function store(Request $request)
     return redirect(route('album.index'));
 
 }
+public function show($id)
+{
+    $Album=Album::with('photos')->where('id',$id)->first();
+  return view('admin.photo.show',compact('Album'));
+}
 
 }

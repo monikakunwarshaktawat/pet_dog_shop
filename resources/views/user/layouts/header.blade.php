@@ -18,7 +18,7 @@
             <a class="nav-link" href="post.html">Sample Post</a>
           </li>
          <li class="nav-item">
-            <a class="nav-link" href="#">Gallery</a>
+            <a class="nav-link" href="{{route('gallery')}}">Gallery</a>
           </li>
            <li class="nav-item">
             <a class="nav-link" href="#">Contact Us</a>
@@ -44,16 +44,6 @@
   </nav>
 
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url(@yield('bg-img'))">
-    <div class="overlay" style="opacity: 0"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="site-heading">
-            <h1>@yield('title')</h1>
-            <span class="subheading">@yield('subheading')</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
+
+  @section('header')
+  @show
